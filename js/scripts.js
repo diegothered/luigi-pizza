@@ -11,10 +11,6 @@
 function Pizza(selectsize) {
   this.size = selectsize
 }
-//
-// Pizza.prototype.addTopping = function() {
-//
-// }
 
 //user interface logic
 
@@ -24,7 +20,6 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-    // var inputTitle = ($("#title").val());
     var inputSize = ($("#size").val());
 
     var newPizza = new Pizza(inputSize);
@@ -33,30 +28,24 @@ $(document).ready(function() {
 
     $("input:checkbox[name=topping]:checked").each(function() {
       price = parseInt($(this).val())
-      console.log(price);
+      for (var i = 0; i < ".checkbox".length; i++) {
+        if (".checkbox" [i].checked) {
+          price.push(".checkbox" [i].value);
+        }
+      }
 
 
-    if (newPizza.size === "small"){
-      price += 10;
-    } else if (newPizza.size === "medium"){
-      price += 15;
-    } else {
-      price += 20;
-    }
-    //
-    // if (newTicket.age === "discount"){
-    //   price -= 5
-    // }
-    //
-    // if (newTicket.time === "matinee"){
-    //   price += 2
-    // } else {
-    //   price += 5
-    // }
+      if (newPizza.size === "small") {
+        price += 10;
+      } else if (newPizza.size === "medium") {
+        price += 15;
+      } else {
+        price += 20;
+      }
 
-    $("#show-price").text("The price of your pizza is $" + price + ".");
+      $("#show-price").text("The price of your pizza is $" + price + ".");
 
-    // console.log(price);
+      // console.log(price);
+    });
   });
-});
 });
