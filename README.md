@@ -5,16 +5,7 @@ ___
 
 ### _Description_
 ___
-This project is intended to take an input number and create a list of numbers starting from 1 counting up to the input number. When the count reaches a number divisible by 3 there will be a return of "ping", when a number divisible by 5 there will be a return of "pong" and if the number is divisible by 15 the return will be "ping pong".
-
-### _Specifications_
-___
-|Input  | Output|
-| ------------- | ------------- |
-| 2  | 1, 2 |
-| 4  | 1, 2, ping, 4  |
-| 6 | 1, 2, ping, 4, pong, 6  |
-| "hi"  | "please enter a number"  |
+This project is built to gather information from a user in order to order a pizza with numerous toppings and three options for sizes.
 
 ### _Setup_
 ___

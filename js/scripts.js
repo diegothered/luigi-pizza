@@ -8,10 +8,13 @@
 
 //business logic
 
-function Pizza(selectopping, selectsize) {
-  this.topping = selectopping;
-  this.size = selectsize;
-};
+function Pizza(selectsize) {
+  this.size = selectsize
+}
+//
+// Pizza.prototype.addTopping = function() {
+//
+// }
 
 //user interface logic
 
@@ -24,13 +27,18 @@ $(document).ready(function() {
     // var inputTitle = ($("#title").val());
     var inputSize = ($("#size").val());
 
-    var newPizza = new Pizza(inputTopping, inputSize);
+    var newPizza = new Pizza(inputSize);
 
     var price = 0
 
-    if (newPizza.size === "Small"){
+    $("input:checkbox[name=topping]:checked").each(function() {
+      price = parseInt($(this).val())
+      console.log(price);
+
+
+    if (newPizza.size === "small"){
       price += 10;
-    } if else (newPizza.size === "Medium"){
+    } else if (newPizza.size === "medium"){
       price += 15;
     } else {
       price += 20;
@@ -50,4 +58,5 @@ $(document).ready(function() {
 
     // console.log(price);
   });
+});
 });
